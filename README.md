@@ -1,4 +1,4 @@
-![Kustomer](./docs/images/logo.png){:height="72px" width="72px"}.
+[<img src="./docs/images/logo.png" width="100"/>](./docs/images/logo.png)
 
 # Happeo Kustomer Custom App
 
