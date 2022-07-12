@@ -1,0 +1,23 @@
+name: Widget CI
+
+on: [push]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress tests
+        uses: cypress-io/github-action@v4.1.0
+        with:
+          build: npm run build
+          start: npm run local
+          wait-on: "http://localhost:8080"
+
+      - name: Archive production build
+        uses: actions/upload-artifact@v3
+        with:
+          name: Production bundle
+          path: dist
