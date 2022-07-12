@@ -40,9 +40,9 @@ const Widget = ({ id, editMode }: Props) => {
 
   if (!settings.apiKey) {
     return (
-      <div>
+      <div data-testid="chatbot-not-configured-container">
         <TextZeta>Kustomer ChatBot Widget</TextZeta>
-        <BodyUI>Please provide your apiKey.</BodyUI>
+        <BodyUI>Please provide your API key.</BodyUI>
         <BodyUI>
           To access the Chat SDK settings for a brand in Kustomer, go to Apps
           and select Chat. From the Chat Management page, select the brand and
@@ -50,8 +50,8 @@ const Widget = ({ id, editMode }: Props) => {
         </BodyUI>
         <BodyUI>
           Read more about{" "}
-          <LinkExternal href="https://kustomer.kustomer.help/chat-sdk-SyRjnij0P">
-            Kustomer Chat Management: Install Chat
+          <LinkExternal href="https://developer.kustomer.com/chat-sdk/v2.0-Web/docs">
+            Kustomer Chat SDK: Get Started
           </LinkExternal>
           .
         </BodyUI>
