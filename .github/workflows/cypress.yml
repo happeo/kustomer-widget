@@ -3,7 +3,7 @@ on:
   push:
   pull_request:
 jobs:
-  basic-ubuntu-18-v10:
+  cypress-e2e:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
