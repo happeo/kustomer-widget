@@ -1,9 +1,9 @@
-name: Cypress E2E
-on:
-  push:
-  pull_request:
+name: Widget CI
+
+on: [push]
+
 jobs:
-  cypress-e2e:
+  build_and_test:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout
@@ -15,3 +15,9 @@ jobs:
           build: npm run build
           start: npm run local
           wait-on: "http://localhost:8080"
+
+      - name: Archive production build
+        uses: actions/upload-artifact@v3
+        with:
+          name: Production bundle
+          path: dist
