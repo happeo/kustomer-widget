@@ -11,7 +11,7 @@ class happeoCustomReactWidget extends HTMLElement {
   }
 }
 
-const slug = "kustomerwidgetv1-a3aquryjflorr1ejwhsn";
+const slug = "kustomer-chatbot-v2-u0gb2m1qohtujlmtf1t9";
 
 window.customElements.get(slug) ||
   window.customElements.define(slug, happeoCustomReactWidget);

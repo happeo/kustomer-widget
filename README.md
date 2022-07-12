@@ -1,12 +1,10 @@
-![Kustomer](./docs/images/logo.png){width=100 height=80}
+![Kustomer](./docs/images/logo.png){:height="72px" width="72px"}.
 
 # Happeo Kustomer Custom App
 
 ## About The Project
 
 Kustomer Custom app is a Happeo Pages integration. It enables Kustomer Chatbot widget in the Happeo Pages.
-
-![Kustomer Custom App](./docs/images/screenshot.png){width=700 height=445}
 
 ### Built With
 
