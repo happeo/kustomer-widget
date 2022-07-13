@@ -32,7 +32,6 @@ module.exports = (env) => {
       hot: false,
       inline: true,
       liveReload: true,
-      port: 8082,
     },
     resolve: {
       extensions: [".tsx", ".ts", ".js"],

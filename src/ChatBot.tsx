@@ -1,7 +1,7 @@
 import React from "react";
 import useScript from "./useScript";
 
-const BUNDLE_CDN = "https://cdn.kustomerapp.com/chat-web/widget.js";
+export const BUNDLE_CDN = "https://cdn.kustomerapp.com/chat-web/widget.js";
 
 interface Props {
   apiKey: string;

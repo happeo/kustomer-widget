@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Widget from "./Widget";
+import { removeWidget } from "./utils";
 
 class happeoCustomReactWidget extends HTMLElement {
   connectedCallback() {
@@ -8,6 +9,9 @@ class happeoCustomReactWidget extends HTMLElement {
     const mode = this.getAttribute("mode") || "";
 
     ReactDOM.render(<Widget id={uniqueId} editMode={mode === "edit"} />, this);
+  }
+  disconnectedCallback() {
+    removeWidget();
   }
 }
 

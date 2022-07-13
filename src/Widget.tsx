@@ -61,14 +61,18 @@ const Widget = ({ id, editMode }: Props) => {
 
   return (
     <div>
-      {editMode && (
+      {editMode ? (
         <div>
           <TextZeta>Kustomer ChatBot Widget</TextZeta>
-          <BodyUI>Widget will be rendered to bottom right corner. </BodyUI>
+          <BodyUI>
+            Widget will be rendered to bottom right corner after closing the
+            edit mode.
+          </BodyUI>
           <BodyUI>This text will be visible only in edit mode. </BodyUI>
         </div>
+      ) : (
+        <ChatBot brandId={settings.brandId} apiKey={settings.apiKey} />
       )}
-      <ChatBot brandId={settings.brandId} apiKey={settings.apiKey} />
     </div>
   );
 };
