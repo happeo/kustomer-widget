@@ -1,6 +1,6 @@
 {
   "name": "kustomer-widget",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Kustomer Widget",
   "main": "index.js",
   "scripts": {

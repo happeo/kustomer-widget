@@ -15,10 +15,13 @@ class happeoCustomReactWidget extends HTMLElement {
   }
 }
 
-const slug = "kustomer-chatbot-v2-u0gb2m1qohtujlmtf1t9";
+//const slug = "kustomer-chatbot-v2-u0gb2m1qohtujlmtf1t9";
 
 // Staging marketplace
 // const slug = "kustomer-widget-grvnr9okmxmbsudifk0a-ac";
+
+// Prod marketplace
+const slug = "kustomer-widget-zmkl6ixsn72g6cxuuz92-ac";
 
 window.customElements.get(slug) ||
   window.customElements.define(slug, happeoCustomReactWidget);
