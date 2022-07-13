@@ -6,6 +6,8 @@
 
 Kustomer Custom app is a Happeo Pages integration. It enables Kustomer Chatbot widget in the Happeo Pages.
 
+[<img src="./docs/images/visual.png" width="100%"/>](./docs/images/visual.png)
+
 ### Built With
 
 - [Kustomer Chat SDK](https://kustomer.kustomer.help/en_us/chat-sdk-SyRjnij0P)
