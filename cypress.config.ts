@@ -14,5 +14,6 @@ export default defineConfig({
       return require("./cypress/plugins/index.js")(on, config);
     },
     baseUrl: "http://localhost:8080",
+    experimentalRunAllSpecs: true, 
   },
 });
