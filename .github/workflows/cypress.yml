@@ -17,13 +17,17 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - uses: actions/checkout@v2
+      - run: node -v
 
-      - name: Cypress tests
-        uses: cypress-io/github-action@v4.1.0
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
         with:
           build: npm run build
           start: npm run local
