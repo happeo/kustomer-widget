@@ -3,9 +3,9 @@ name: Widget CI
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build_and_test:
@@ -17,6 +17,7 @@ jobs:
       - name: Cypress tests
         uses: cypress-io/github-action@v4.1.0
         with:
+          install: npm ci --legacy-peer-deps
           build: npm run build
           start: npm run local
           wait-on: "http://localhost:8080"
