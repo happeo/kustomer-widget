@@ -3,19 +3,29 @@ name: Widget CI
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [14]
 
-      - name: Cypress tests
-        uses: cypress-io/github-action@v4.1.0
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node -v
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
         with:
           build: npm run build
           start: npm run local
