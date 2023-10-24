@@ -3,13 +3,19 @@ name: Widget CI
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -17,6 +23,7 @@ jobs:
       - name: Cypress tests
         uses: cypress-io/github-action@v4.1.0
         with:
+          node-version: ${{ matrix.node-version }}
           build: npm run build
           start: npm run local
           wait-on: "http://localhost:8080"
