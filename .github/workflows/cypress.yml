@@ -17,7 +17,7 @@ jobs:
       - name: Cypress tests
         uses: cypress-io/github-action@v4.1.0
         with:
-          install: npm ci --legacy-peer-deps
+          install-command: npm ci --legacy-peer-deps
           build: npm run build
           start: npm run local
           wait-on: "http://localhost:8080"
