@@ -20,7 +20,7 @@ jobs:
           install-command: npm ci --legacy-peer-deps
           build: npm run build
           start: npm run local
-          wait-on: "http://localhost:8080"
+          wait-on: "http://localhost:8080/webpack-dev-server/"
 
       - name: Archive production build
         uses: actions/upload-artifact@v3
